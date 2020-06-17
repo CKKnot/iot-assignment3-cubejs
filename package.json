@@ -1,0 +1,18 @@
+{
+  "name": "iot-assignment3-cubejs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@cubejs-backend/mysql-driver": "^0.19.14",
+    "@cubejs-backend/server": "^0.19.14"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

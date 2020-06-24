@@ -9,9 +9,13 @@ cube(`Sensor`, {
       sql: `soil_moisture`,
       type: `number`,
     },
-  averageSoilMoisture: {
+    averageSoilMoisture: {
       sql: `soil_moisture`,
-      type: `avg`
+      type: `avg`,
+    },
+    soilMoistureStd: {
+      sql: `std(soil_moisture)`,
+      type: `number`,
     },
     ambientTemperature: {
       sql: `ambient_temperature`,
@@ -19,7 +23,11 @@ cube(`Sensor`, {
     },
     averageAmbientTemperature: {
       sql: `ambient_temperature`,
-      type: `avg`
+      type: `avg`,
+    },
+    ambientTemperatureStd: {
+      sql: `std(ambient_temperature)`,
+      type: `number`,
     },
     lightIntensity: {
       sql: `light_intensity`,
@@ -27,7 +35,11 @@ cube(`Sensor`, {
     },
     averageLightIntensity: {
       sql: `light_intensity`,
-      type: `avg`
+      type: `avg`,
+    },
+    lightIntensityStd: {
+      sql: `std(light_intensity)`,
+      type: `number`,
     },
     lightIntensity2: {
       sql: `light_intensity2`,
@@ -35,8 +47,17 @@ cube(`Sensor`, {
     },
     averageLightIntensity2: {
       sql: `light_intensity2`,
-      type: `avg`
+      type: `avg`,
     },
+    lightIntensity2Std: {
+      sql: `std(light_intensity2)`,
+      type: `number`,
+    },
+    lightIntensityVariance: {
+      sql: `(POWER(light_intensity - AVG(light_intensity), 2) + POWER(light_intensity - AVG(light_intensity2),2))/2`,
+      type: `number`,
+    },
+    
     distance: {
       sql: `distance`,
       type: `number`,
